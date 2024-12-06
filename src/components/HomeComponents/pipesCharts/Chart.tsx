@@ -108,7 +108,7 @@ const Chart = () => {
 
   return (
     <div className="bg-white rounded-lg h-full">
-      <div className="relative h-[300px]">
+      <div className="relative h-[200px]">
         <Bar data={data} options={options} />
       </div>
     </div>
