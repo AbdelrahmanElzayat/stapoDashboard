@@ -14,7 +14,7 @@ const HeadChart = () => {
   return (
     <div className="flex items-center justify-between mb-4">
       <h2
-        className={`font-bold text-gray-800 lg:custom-stroke text-sm  lg:text-lg ${style.paidTitle}`}
+        className={`font-bold text-gray-800 text-sm  lg:text-lg ${style.paidTitle}`}
       >
         مبيعات المتجر
       </h2>

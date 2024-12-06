@@ -1,3 +1,9 @@
-.paidTitle{
-   line-height: 25px; 
+.paidTitle {
+  line-height: 25px;
+}
+@media (min-width: 994px) {
+  .paidTitle {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+  }
 }

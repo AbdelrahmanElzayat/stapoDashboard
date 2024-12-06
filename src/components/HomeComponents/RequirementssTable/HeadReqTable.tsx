@@ -1,6 +1,7 @@
 import React from "react";
 import searchIcon from "../../../assets/icons/search.svg";
 import Image from "next/image";
+import style from "./table.module.css";
 const HeadReqTable = () => {
   const months = Array.from({ length: 12 }, (_, i) =>
     new Date(0, i).toLocaleString("ar-EG", { month: "long" })
@@ -8,7 +9,7 @@ const HeadReqTable = () => {
   return (
     <div className="flex items-center justify-between flex-wrap mb-4 overflow-auto">
       <h2
-        className={`font-bold text-gray-800 lg:custom-stroke text-sm  lg:text-lg`}
+        className={`font-bold text-gray-800 ${style.paidTitle} text-sm lg:text-lg`}
       >
         طلبات المتجر
       </h2>
