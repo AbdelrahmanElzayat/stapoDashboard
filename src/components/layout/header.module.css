@@ -1,0 +1,15 @@
+.active {
+  font-weight: bold;
+  position: relative;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 12px;
+  background: #f5d446;
+  border-radius: 1px;
+}
