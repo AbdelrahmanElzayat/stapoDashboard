@@ -7,3 +7,9 @@
     -webkit-text-stroke-color: #000;
   }
 }
+@media (min-width: 994px) {
+  .yearTitle {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+  }
+}

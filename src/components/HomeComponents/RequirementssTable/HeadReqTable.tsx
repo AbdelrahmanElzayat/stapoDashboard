@@ -25,7 +25,7 @@ const HeadReqTable = () => {
           </div>
         </div>
         <select
-          className="pl-5 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
+          className="pl-3 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
           defaultValue="الشهر"
         >
           <option disabled>الشهر</option>
@@ -36,7 +36,7 @@ const HeadReqTable = () => {
           ))}
         </select>
         <select
-          className="pl-5 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
+          className="pl-3 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
           defaultValue="المصدر"
         >
           <option disabled>المصدر</option>
@@ -45,7 +45,7 @@ const HeadReqTable = () => {
           <option value="المصدر3">المصدر 3</option>
         </select>
         <select
-          className="pl-5 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
+          className="pl-3 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
           defaultValue="الدفع"
         >
           <option disabled>الدفع</option>
@@ -53,7 +53,7 @@ const HeadReqTable = () => {
           <option value="غير مدفوع">غير مدفوع</option>
         </select>
         <select
-          className="pl-5 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
+          className="pl-3 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
           defaultValue="حالة الطلب"
         >
           <option disabled>حالة الطلب</option>
@@ -62,7 +62,7 @@ const HeadReqTable = () => {
           <option value="ملغي">ملغي</option>
         </select>
         <select
-          className="pl-5 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
+          className="pl-3 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
           defaultValue="حالة الدفع"
         >
           <option disabled>حالة الدفع</option>
@@ -70,7 +70,7 @@ const HeadReqTable = () => {
           <option value="جزئي">جزئي</option>
           <option value="غير مدفوع">غير مدفوع</option>
         </select>
-        <button className="text-xs font-normal py-1 lg:py-2 px-2 lg:px-4 bg-[#F5D446] rounded-lg hover:bg-[#F5D446BC] transition-all">
+        <button className="text-xs font-normal py-2 px-2 lg:px-4 bg-[#F5D446] rounded-lg hover:bg-[#F5D446BC] transition-all">
           تصدير
         </button>
         <button className=" py-[2px] px-1 bg-[#646464] rounded-lg hover:bg-[#646464BC] transition-all">
