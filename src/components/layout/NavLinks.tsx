@@ -37,9 +37,9 @@ const NavLinks = () => {
           </li>
           <li className="mr-3">
             <Link
-              href={"/talabat"}
+              href={"/orders"}
               className={`flex items-center gap-2 text-sm font-normal text-textPrimary ${
-                pathname === "/talabat" ? style.active : ""
+                pathname === "/orders" ? style.active : ""
               }`}
             >
               <Image src={talabat} alt="talabat icon" />

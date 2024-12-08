@@ -1,26 +1,28 @@
 import ReqTable from "@/components/HomeComponents/RequirementssTable/ReqTable";
-import BarChart from "@/components/HomeComponents/pipesCharts/BarChart";
 import HeaderStatistics from "@/components/headerStatistics/HeaderStatistics";
+import MoreOrders from "@/components/orderComponents/moreOrders/MoreOrders";
 import { HeaderInfoType } from "@/utils/types/HeaderInfoType";
+import React from "react";
 
-export default function Home() {
+const page = () => {
   const headerInfo: HeaderInfoType[] = [
+    {
+      title: "إجمالي الطلبات",
+      total: 753422,
+    },
+    {
+      title: "طلبات اليوم",
+      total: 305,
+    },
     {
       title: "إجمالي المبيعات",
       total: 830000,
       currency: "ر.س",
     },
     {
-      title: "إجمالي الطلبات",
-      total: 753422,
-    },
-    {
-      title: "عدد العملاء",
-      total: 753422,
-    },
-    {
-      title: "الزيارات",
-      total: 839420,
+      title: "المبيعات اليوم",
+      total: 35300,
+      currency: "ر.س",
     },
     {
       title: "معدل التحويل",
@@ -31,12 +33,15 @@ export default function Home() {
   return (
     <div>
       <HeaderStatistics
-        title={"الرئيسية"}
-        des={"تصفـح المبيعـات و الطلبات الخاصة بمتجرك"}
+        title={"الطلبـات"}
+        des={"تصفح الطلبات او قم بإنشاء طلب جديد"}
         headerInfo={headerInfo}
       />
-      <BarChart />
+      <MoreOrders />
+      <ReqTable />
       <ReqTable />
     </div>
   );
-}
+};
+
+export default page;
