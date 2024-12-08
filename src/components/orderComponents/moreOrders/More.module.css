@@ -1,16 +1,10 @@
 .moreTitle {
   color: #414141;
-  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
 }
 
 .moreDesc {
-  color: #414141;
-  text-align: right;
-  -webkit-text-stroke-width: 1;
-  -webkit-text-stroke-color: #000;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 25px; /* 208.333% */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;;
 }

@@ -1,7 +1,8 @@
 import ReqTable from "@/components/HomeComponents/RequirementssTable/ReqTable";
 import BarChart from "@/components/HomeComponents/pipesCharts/BarChart";
 import HeaderStatistics from "@/components/headerStatistics/HeaderStatistics";
-import { HeaderInfoType } from "@/utils/types/HeaderInfoType";
+import { HeaderInfoType, Order } from "@/utils/types/HeaderInfoType";
+import homeData from "../../Data/HomeDataTable.json";
 
 export default function Home() {
   const headerInfo: HeaderInfoType[] = [
@@ -28,6 +29,8 @@ export default function Home() {
       currency: "%",
     },
   ];
+
+  const data: Order[] = homeData;
   return (
     <div>
       <HeaderStatistics
@@ -36,7 +39,7 @@ export default function Home() {
         headerInfo={headerInfo}
       />
       <BarChart />
-      <ReqTable />
+      <ReqTable data={data} label={"طلبـات المتجـر"} />
     </div>
   );
 }

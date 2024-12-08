@@ -1,7 +1,7 @@
 import React from "react";
 import searchIcon from "../../../assets/icons/search.svg";
 import Image from "next/image";
-import style from "./table.module.css";
+import style from "../../HomeComponents/RequirementssTable/table.module.css";
 interface propsHead {
   label: string;
 }

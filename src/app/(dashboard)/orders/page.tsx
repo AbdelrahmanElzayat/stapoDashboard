@@ -1,10 +1,20 @@
-import ReqTable from "@/components/HomeComponents/RequirementssTable/ReqTable";
 import HeaderStatistics from "@/components/headerStatistics/HeaderStatistics";
 import MoreOrders from "@/components/orderComponents/moreOrders/MoreOrders";
-import { HeaderInfoType } from "@/utils/types/HeaderInfoType";
 import React from "react";
+import homeData from "../../../Data/OrderDataTable.json";
+import dataAbandonedd from "../../../Data/AbandonedbasketsTable.json";
+import {
+  HeaderInfoType,
+  Order,
+  AbandonedData,
+} from "@/utils/types/HeaderInfoType";
+import OrderTable from "@/components/orderComponents/tablesComponents/OrderTable";
+import AbandonedTable from "@/components/orderComponents/tablesComponents/AbandonedTable";
 
 const page = () => {
+  const data: Order[] = homeData;
+  const dataAbandoned: AbandonedData[] = dataAbandonedd;
+
   const headerInfo: HeaderInfoType[] = [
     {
       title: "إجمالي الطلبات",
@@ -38,8 +48,8 @@ const page = () => {
         headerInfo={headerInfo}
       />
       <MoreOrders />
-      <ReqTable />
-      <ReqTable />
+      <OrderTable data={data} label={"طلبـات المتجـر"} />
+      <AbandonedTable data={dataAbandoned} label={"السلال المتروكة"} />
     </div>
   );
 };

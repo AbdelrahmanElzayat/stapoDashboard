@@ -3,114 +3,79 @@ import Image from "next/image";
 import React from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
 import actions from "../../../assets/icons/actions.svg";
-interface Order {
-  id: number;
-  orderNumber: string;
-  client: string;
-  orderDate: string;
-  store: string;
-  ship: string;
-  price: string;
-  totalAmount: string;
-  orderStatus: string;
-  payStatus: string;
+import { useState } from "react";
+import AcceptModalExample from "@/components/modals/AcceptModal";
+import CancelModal from "@/components/modals/CancelModal";
+interface ReqTableProps<T> {
+  data: T[];
+  columns: TableColumn<T>[];
 }
 
-const Table = () => {
-  const data: Order[] = [
-    {
-      id: 1,
-      orderNumber: "43231",
-      client: "عبدالرحمن الزيات",
-      orderDate: "13th Jan 2021",
-      store: "لوحة التحكم",
-      ship: "شركة الشحن",
-      price: "50 ر.س",
-      totalAmount: "2500 SR",
-      orderStatus: "جاهز",
-      payStatus: "غير مدفوع",
-    },
-    {
-      id: 1,
-      orderNumber: "43231",
-      client: "عبدالرحمن الزيات",
-      orderDate: "13th Jan 2021",
-      store: "لوحة التحكم",
-      ship: "شركة الشحن",
-      price: "50 ر.س",
-      totalAmount: "2500 SR",
-      orderStatus: "جاهز",
-      payStatus: "غير مدفوع",
-    },
-    {
-      id: 1,
-      orderNumber: "43231",
-      client: "عبدالرحمن الزيات",
-      orderDate: "13th Jan 2021",
-      store: "لوحة التحكم",
-      ship: "شركة الشحن",
-      price: "50 ر.س",
-      totalAmount: "2500 SR",
-      orderStatus: "جاهز",
-      payStatus: "غير مدفوع",
-    },
-  ];
+const Table = <T extends { id: number }>({
+  data,
+  columns,
+}: ReqTableProps<T>) => {
+  
+  const [openRowId, setOpenRowId] = React.useState<number | null>(null);
 
-  const columns: TableColumn<Order>[] = [
-    {
-      name: "رقم الطلب",
-      selector: (row) => row.orderNumber,
-      sortable: true,
-    },
-    {
-      name: "العميل",
-      selector: (row) => row.client,
-      sortable: true,
-    },
-    {
-      name: "تاريخ الطلب",
-      selector: (row) => row.orderDate,
-      sortable: true,
-    },
-    {
-      name: "المصدر",
-      selector: (row) => row.store,
-      sortable: true,
-    },
-    {
-      name: "الشحن",
-      selector: (row) => row.ship,
-      sortable: true,
-    },
-    {
-      name: "الرسوم",
-      selector: (row) => row.price,
-      sortable: true,
-    },
-    {
-      name: "الإجمالي",
-      selector: (row) => row.totalAmount,
-      sortable: true,
-    },
-    {
-      name: "حالة الطلب",
-      selector: (row) => row.orderStatus,
-      sortable: true,
-    },
-    {
-      name: "حالة الدفع",
-      selector: (row) => row.payStatus,
-      sortable: true,
-    },
-    {
-      name: "الإجراءات",
-      cell: (row) => (
-        <div className="cursor-pointer">
+  const toggleDropdown = (rowId: number) => {
+    setOpenRowId((prev) => (prev === rowId ? null : rowId));
+  };
+
+  const [openModalAccept, setOpenModalAccept] = useState(false);
+  const [openModalCancel, setOpenModalCancel] = useState(false);
+  const acceptOrder = () => {
+    setOpenModalAccept(true);
+  };
+  const cancelOrder = () => {
+    setOpenModalCancel(true);
+  };
+  const actionsColumn: TableColumn<T> = {
+    name: "الإجراءات",
+    cell: (row) => (
+      <>
+        <div
+          className="cursor-pointer"
+          onClick={() => toggleDropdown(row.id)} // استخدام معرف الصف
+        >
           <Image src={actions} alt="actions" />
         </div>
-      ),
-    },
-  ];
+        {openRowId === row.id && ( // تحقق إذا كان هذا الصف هو المفتوح
+          <div className="absolute -right-24 bottom-0 mt-2 w-fit bg-white border border-gray-200 rounded-md shadow-lg z-[1000]">
+            <ul className="py-1 text-[10px]">
+              <li
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                onClick={() => {
+                  acceptOrder();
+                  toggleDropdown(row.id);
+                }}
+              >
+                تأكيد الطلب
+              </li>
+              <li
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                onClick={() => toggleDropdown(row.id)}
+              >
+                تعديل الطلب
+              </li>
+              <li
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                onClick={() => {
+                  cancelOrder();
+                  toggleDropdown(row.id);
+                }}
+              >
+                إلغاء الطلب
+              </li>
+            </ul>
+          </div>
+        )}
+      </>
+    ),
+    ignoreRowClick: true,
+    allowOverflow: true,
+    button: true,
+  };
   const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -119,53 +84,39 @@ const Table = () => {
 
   if (!isMounted) return null; // Render nothing during SSR
   return (
-    <DataTable
-    //   title="طلبات المتجر"
-      columns={columns}
-      data={data}
-      pagination
-      highlightOnHover
-      //   customStyles={{
-      //     rows: {
-      //       style: {
-      //         minHeight: "40px", // تصغير الطول
-      //         fontSize: "12px",
-      //         color: "#000",
-      //         fontWeight: "400",
-      //       },
-      //     },
-      //     headCells: {
-      //       style: {
-      //         fontWeight: "300",
-      //         fontSize: "11px",
-      //         color: "#4C4C4C",
-      //       },
-      //     },
-      //   }}
-      customStyles={{
-        rows: {
-          style: {
-            minHeight: "40px", // تصغير الطول
-            fontSize: "12px",
-            color: "#000",
-            fontWeight: "400",
+    <>
+      <DataTable
+        columns={[...columns, actionsColumn]}
+        data={data}
+        pagination
+        highlightOnHover
+        customStyles={{
+          rows: {
+            style: {
+              minHeight: "40px", // تصغير الطول
+              fontSize: "12px",
+              color: "#000",
+              fontWeight: "400",
+            },
           },
-        },
-        headCells: {
-          style: {
-            fontWeight: "300",
-            fontSize: "11px",
-            color: "#4C4C4C",
+          headCells: {
+            style: {
+              fontWeight: "300",
+              fontSize: "11px",
+              color: "#4C4C4C",
+            },
           },
-        },
-      }}
-      responsive
-      style={{
-        overflowX: "auto", // التمرير الأفقي في حالة تجاوز العرض
-        width: "100%",
-        maxWidth: "100%",
-      }}
-    />
+        }}
+        responsive
+        // style={{
+        //   overflowX: "auto", // التمرير الأفقي في حالة تجاوز العرض
+        //   width: "100%",
+        //   maxWidth: "100%",
+        // }}
+      />
+      <AcceptModalExample open={openModalAccept} setOpen={setOpenModalAccept} />
+      <CancelModal open={openModalCancel} setOpen={setOpenModalCancel} />
+    </>
   );
 };
 

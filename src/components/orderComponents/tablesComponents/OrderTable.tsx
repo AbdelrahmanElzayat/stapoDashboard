@@ -1,16 +1,16 @@
 "use client";
 import React from "react";
-import HeadReqTable from "./HeadReqTable";
-import Table from "./Table";
+import HeadReqTable from "./HeadOrderTable";
 import { TableColumn } from "react-data-table-component";
 import { Order } from "@/utils/types/HeaderInfoType";
+import Table from "@/components/HomeComponents/RequirementssTable/Table";
 
 interface ReqTableProps<T> {
   data: T[];
   label: string;
 }
 
-const ReqTable = <T extends Order>({
+const OrderTable = <T extends Order>({
   data,
   label,
 }: ReqTableProps<T>) => {
@@ -72,4 +72,4 @@ const ReqTable = <T extends Order>({
   );
 };
 
-export default ReqTable;
+export default OrderTable;
