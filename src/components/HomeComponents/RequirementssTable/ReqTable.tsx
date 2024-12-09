@@ -118,8 +118,8 @@ const ReqTable = <T extends Order>({ data, label }: ReqTableProps<T>) => {
         </>
       ),
       ignoreRowClick: true,
-      allowOverflow: true,
-      button: true,
+      // allowOverflow: true,
+      // button: true,
     },
   ];
 

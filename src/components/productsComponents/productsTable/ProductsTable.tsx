@@ -102,8 +102,8 @@ const ProductsTable = <T extends Products>({
         </>
       ),
       ignoreRowClick: true,
-      allowOverflow: true,
-      button: true,
+      // allowOverflow: true,
+      // button: true,
     },
   ];
 
