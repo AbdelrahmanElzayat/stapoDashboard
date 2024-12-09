@@ -105,7 +105,10 @@ const ReqTable = <T extends Order>({ data, label }: ReqTableProps<T>) => {
                 </li>
                 <li
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                  onClick={() => toggleDropdown(row.id)}
+                  onClick={() => {
+                    editOrder();
+                    toggleDropdown(row.id);
+                  }}
                 >
                   تعديل الطلب
                 </li>
@@ -124,8 +127,6 @@ const ReqTable = <T extends Order>({ data, label }: ReqTableProps<T>) => {
         </>
       ),
       ignoreRowClick: true,
-      // allowOverflow: true,
-      // button: true,
     },
   ];
 
