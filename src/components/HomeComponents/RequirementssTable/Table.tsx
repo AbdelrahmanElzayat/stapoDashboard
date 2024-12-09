@@ -4,8 +4,6 @@ import React from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
 import actions from "../../../assets/icons/actions.svg";
 import { useState } from "react";
-import AcceptModalExample from "@/components/modals/AcceptModal";
-import CancelModal from "@/components/modals/CancelModal";
 interface ReqTableProps<T> {
   data: T[];
   columns: TableColumn<T>[];
@@ -15,7 +13,6 @@ const Table = <T extends { id: number }>({
   data,
   columns,
 }: ReqTableProps<T>) => {
-  
   const [openRowId, setOpenRowId] = React.useState<number | null>(null);
 
   const toggleDropdown = (rowId: number) => {
@@ -30,52 +27,52 @@ const Table = <T extends { id: number }>({
   const cancelOrder = () => {
     setOpenModalCancel(true);
   };
-  const actionsColumn: TableColumn<T> = {
-    name: "الإجراءات",
-    cell: (row) => (
-      <>
-        <div
-          className="cursor-pointer"
-          onClick={() => toggleDropdown(row.id)} // استخدام معرف الصف
-        >
-          <Image src={actions} alt="actions" />
-        </div>
-        {openRowId === row.id && ( // تحقق إذا كان هذا الصف هو المفتوح
-          <div className="absolute -right-24 bottom-0 mt-2 w-fit bg-white border border-gray-200 rounded-md shadow-lg z-[1000]">
-            <ul className="py-1 text-[10px]">
-              <li
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                onClick={() => {
-                  acceptOrder();
-                  toggleDropdown(row.id);
-                }}
-              >
-                تأكيد الطلب
-              </li>
-              <li
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                onClick={() => toggleDropdown(row.id)}
-              >
-                تعديل الطلب
-              </li>
-              <li
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                onClick={() => {
-                  cancelOrder();
-                  toggleDropdown(row.id);
-                }}
-              >
-                إلغاء الطلب
-              </li>
-            </ul>
-          </div>
-        )}
-      </>
-    ),
-    ignoreRowClick: true,
-    allowOverflow: true,
-    button: true,
-  };
+  // const actionsColumn: TableColumn<T> = {
+  //   name: "الإجراءات",
+  //   cell: (row) => (
+  //     <>
+  //       <div
+  //         className="cursor-pointer"
+  //         onClick={() => toggleDropdown(row.id)} // استخدام معرف الصف
+  //       >
+  //         <Image src={actions} alt="actions" />
+  //       </div>
+  //       {openRowId === row.id && ( // تحقق إذا كان هذا الصف هو المفتوح
+  //         <div className="absolute -right-24 bottom-0 mt-2 w-fit bg-white border border-gray-200 rounded-md shadow-lg z-[1000]">
+  //           <ul className="py-1 text-[10px]">
+  //             <li
+  //               className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+  //               onClick={() => {
+  //                 acceptOrder();
+  //                 toggleDropdown(row.id);
+  //               }}
+  //             >
+  //               تأكيد الطلب
+  //             </li>
+  //             <li
+  //               className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+  //               onClick={() => toggleDropdown(row.id)}
+  //             >
+  //               تعديل الطلب
+  //             </li>
+  //             <li
+  //               className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+  //               onClick={() => {
+  //                 cancelOrder();
+  //                 toggleDropdown(row.id);
+  //               }}
+  //             >
+  //               إلغاء الطلب
+  //             </li>
+  //           </ul>
+  //         </div>
+  //       )}
+  //     </>
+  //   ),
+  //   ignoreRowClick: true,
+  //   allowOverflow: true,
+  //   button: true,
+  // };
   const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -86,7 +83,7 @@ const Table = <T extends { id: number }>({
   return (
     <>
       <DataTable
-        columns={[...columns, actionsColumn]}
+        columns={columns}
         data={data}
         pagination
         highlightOnHover
@@ -108,14 +105,7 @@ const Table = <T extends { id: number }>({
           },
         }}
         responsive
-        // style={{
-        //   overflowX: "auto", // التمرير الأفقي في حالة تجاوز العرض
-        //   width: "100%",
-        //   maxWidth: "100%",
-        // }}
       />
-      <AcceptModalExample open={openModalAccept} setOpen={setOpenModalAccept} />
-      <CancelModal open={openModalCancel} setOpen={setOpenModalCancel} />
     </>
   );
 };

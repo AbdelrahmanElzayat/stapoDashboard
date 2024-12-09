@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import searchIcon from "../../../assets/icons/search.svg";
 import Image from "next/image";
 import style from "../../HomeComponents/RequirementssTable/table.module.css";
@@ -6,6 +6,7 @@ interface propsHead {
   label: string;
 }
 const HeadTableProducts = ({ label }: propsHead) => {
+  const [selectCategory, setSelectCategory] = useState("");
   return (
     <div className="flex items-center justify-between flex-wrap mb-4 overflow-auto">
       <h2
@@ -23,6 +24,50 @@ const HeadTableProducts = ({ label }: propsHead) => {
           <div className="absolute top-1/2 -translate-y-1/2 right-0">
             <Image src={searchIcon} alt="search" />
           </div>
+        </div>
+        <div className="selectFilter border-b-[1px] pb-2 border-[#DCDFE4]">
+          <ul className="flex justify-center items-center gap-3 text-[11px] text-[#B2B2B2] font-normal">
+            <li
+              className={`cursor-pointer ${
+                selectCategory === "ourProducts"
+                  ? "text-black font-bold"
+                  : "text-[#B2B2B2]"
+              }`}
+              onClick={() => setSelectCategory("ourProducts")}
+            >
+              منتجاتي
+            </li>
+            <li
+              className={`cursor-pointer ${
+                selectCategory === "stapo-products"
+                  ? "text-black font-bold"
+                  : "text-[#B2B2B2]"
+              }`}
+              onClick={() => setSelectCategory("stapo-products")}
+            >
+              منتجـات ستابـو
+            </li>
+            <li
+              className={`cursor-pointer ${
+                selectCategory === "ourNewProducts"
+                  ? "text-black font-bold"
+                  : "text-[#B2B2B2]"
+              }`}
+              onClick={() => setSelectCategory("ourNewProducts")}
+            >
+              منتجاتنا الجديدة
+            </li>
+            <li
+              className={`cursor-pointer ${
+                selectCategory === "low"
+                  ? "text-black font-bold"
+                  : "text-[#B2B2B2]"
+              }`}
+              onClick={() => setSelectCategory("low")}
+            >
+              مخزون منخفض
+            </li>
+          </ul>
         </div>
         <select
           className="pl-3 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
