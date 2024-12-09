@@ -1,0 +1,15 @@
+.productList{
+      scrollbar-width: thin;
+}
+.productList .ProductCard:not(:last-of-type){
+    border-bottom: 1px solid #E8E8E8;
+}
+.noscrollbar::-webkit-scrollbar {
+  display: none; /* إخفاء الـ scrollbar */
+}
+
+.noscrollbar {
+  -ms-overflow-style: none; /* لـ Internet Explorer */
+  scrollbar-width: none; /* لـ Firefox */
+  resize: none; /* تعطيل تغيير الحجم اليدوي */
+}

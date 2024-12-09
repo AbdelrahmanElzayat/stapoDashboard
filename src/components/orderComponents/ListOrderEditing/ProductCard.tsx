@@ -2,9 +2,11 @@ import Image from "next/image";
 import React from "react";
 import productExample from "../../../assets/images/productExample.png";
 import Delete from "../../../assets/icons/deleteProduct.svg";
+import style from "./productList.module.css";
+
 const ProductCard = () => {
   return (
-    <div className="relative ProductCard flex gap-5">
+    <div className={`relative ${style.ProductCard} flex flex-wrap gap-5 pb-4`}>
       <div className="deleteProduct absolute top-1 left-0 cursor-pointer">
         <Image src={Delete} alt="delete" />
       </div>
@@ -21,7 +23,7 @@ const ProductCard = () => {
           بيفار جل العناية بالعيون للحيوانات الأليفة
         </h2>
         <div className="productQty flex justify-between items-center">
-          <span className="productQty-Price text-textPrimary font-normal text-xl font-sans">
+          <span className="productQty-Price text-textPrimary font-bold text-xl font-sans">
             60.00 SR
           </span>
           <div className="productQty-qty flex items-center gap-4">

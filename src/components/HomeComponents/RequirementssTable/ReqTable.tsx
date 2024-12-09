@@ -8,6 +8,7 @@ import AcceptModalExample from "@/components/modals/AcceptModal";
 import CancelModal from "@/components/modals/CancelModal";
 import Image from "next/image";
 import actions from "../../../assets/icons/actions.svg";
+import EditOrder from "@/components/modals/EditOrder";
 
 interface ReqTableProps<T> {
   data: T[];
@@ -23,11 +24,16 @@ const ReqTable = <T extends Order>({ data, label }: ReqTableProps<T>) => {
 
   const [openModalAccept, setOpenModalAccept] = useState(false);
   const [openModalCancel, setOpenModalCancel] = useState(false);
+  const [openModalEdit, setOpenModalEdit] = React.useState(false);
+
   const acceptOrder = () => {
     setOpenModalAccept(true);
   };
   const cancelOrder = () => {
     setOpenModalCancel(true);
+  };
+  const editOrder = () => {
+    setOpenModalEdit(true);
   };
   const columns: TableColumn<Order>[] = [
     {
@@ -133,6 +139,7 @@ const ReqTable = <T extends Order>({ data, label }: ReqTableProps<T>) => {
           setOpen={setOpenModalAccept}
         />
         <CancelModal open={openModalCancel} setOpen={setOpenModalCancel} />
+        <EditOrder open={openModalEdit} setOpen={setOpenModalEdit} />
       </div>
     </div>
   );
