@@ -9,7 +9,7 @@ import {
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 
-export default function EditCode({ open, setOpen }: any) {
+export default function EditDiscount({ open, setOpen }: any) {
   const [startDate, setStartDate] = useState<any>(new Date());
 
   return (
@@ -27,18 +27,13 @@ export default function EditCode({ open, setOpen }: any) {
           >
             <div className="bg-white pb-4 pt-2 px-4 rounded-lg">
               <h4 className="text-right my-5 font-bold text-textPrimary capitalize text-lg">
-                بيانات كود الخصم
+                بيانات نسبة الخصم
               </h4>
               <div className="mt-3 text-right sm:mt-0 flex flex-col justify-center items-center">
                 <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-                  <input
-                    type="text"
-                    placeholder="اسم كود الخصم"
-                    className="rounded-lg py-3 px-4 text-sm placeholder:text-[#323232] text-right border-[1px] border-[#E8E8E8]"
-                  />
                   <select
                     value="نسبة الخصم"
-                    className="rounded-lg py-3 px-4 text-sm placeholder:text-[#323232] text-right border-[1px] border-[#E8E8E8]"
+                    className="col-span-1 sm:col-span-2 rounded-lg py-3 px-4 text-sm placeholder:text-[#323232] text-right border-[1px] border-[#E8E8E8]"
                   >
                     <option disabled>نسبة الخصم</option>
                     <option>5%</option>
@@ -53,12 +48,8 @@ export default function EditCode({ open, setOpen }: any) {
                     className="rounded-lg py-3 px-4 text-sm placeholder:text-[#323232] text-right border-[1px] border-[#E8E8E8]"
                   >
                     <option disabled>فئات المنتجات</option>
-                    <option>5%</option>
-                    <option>10%</option>
-                    <option>20%</option>
-                    <option>30%</option>
-                    <option>40%</option>
-                    <option>50%</option>
+                    <option>منتجات كلاب</option>
+                    <option>منتجات قطط</option>
                   </select>
                   <div className="relative z-50">
                     <DatePicker

@@ -4,13 +4,9 @@ import {
   Dialog,
   DialogBackdrop,
   DialogPanel,
-  DialogTitle,
 } from "@headlessui/react";
-import { useState } from "react";
-import DatePicker from "react-datepicker";
 
-export default function EditCode({ open, setOpen }: any) {
-  const [startDate, setStartDate] = useState<any>(new Date());
+export default function EditLoyalty({ open, setOpen }: any) {
 
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-50">
@@ -27,56 +23,32 @@ export default function EditCode({ open, setOpen }: any) {
           >
             <div className="bg-white pb-4 pt-2 px-4 rounded-lg">
               <h4 className="text-right my-5 font-bold text-textPrimary capitalize text-lg">
-                بيانات كود الخصم
+                بيانات برنامج الولاء
               </h4>
               <div className="mt-3 text-right sm:mt-0 flex flex-col justify-center items-center">
                 <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                   <input
                     type="text"
-                    placeholder="اسم كود الخصم"
-                    className="rounded-lg py-3 px-4 text-sm placeholder:text-[#323232] text-right border-[1px] border-[#E8E8E8]"
+                    placeholder="اسم برنامج الولاء"
+                    className="col-span-1 sm:col-span-2  rounded-lg py-3 px-4 text-sm placeholder:text-[#323232] text-right border-[1px] border-[#E8E8E8]"
                   />
                   <select
-                    value="نسبة الخصم"
+                    value="نوع البرنامج"
                     className="rounded-lg py-3 px-4 text-sm placeholder:text-[#323232] text-right border-[1px] border-[#E8E8E8]"
                   >
-                    <option disabled>نسبة الخصم</option>
-                    <option>5%</option>
-                    <option>10%</option>
-                    <option>20%</option>
-                    <option>30%</option>
-                    <option>40%</option>
-                    <option>50%</option>
+                    <option disabled>نوع البرنامج</option>
+                    <option>نقاط</option>
                   </select>
+
                   <select
-                    value="فئات المنتجات"
+                    value="حالة البرنامج"
                     className="rounded-lg py-3 px-4 text-sm placeholder:text-[#323232] text-right border-[1px] border-[#E8E8E8]"
                   >
-                    <option disabled>فئات المنتجات</option>
-                    <option>5%</option>
-                    <option>10%</option>
-                    <option>20%</option>
-                    <option>30%</option>
-                    <option>40%</option>
-                    <option>50%</option>
-                  </select>
-                  <div className="relative z-50">
-                    <DatePicker
-                      //   selected={startDate}
-                      onChange={(date: any) => setStartDate(date)}
-                      placeholderText="تاريخ النهاية"
-                      className="rounded-lg py-3 px-4 text-sm placeholder:text-[#323232] text-right border-[1px] border-[#E8E8E8] w-full"
-                    />
-                  </div>
-                  <select
-                    value="حالة الكود"
-                    className="col-span-1 sm:col-span-2 rounded-lg py-3 px-4 text-sm placeholder:text-[#323232] text-right border-[1px] border-[#E8E8E8]"
-                  >
-                    <option disabled>حالة الكود</option>
+                    <option disabled>حالة البرنامج</option>
                     <option>ساري</option>
                     <option>غير ساري</option>
                   </select>
-                  <div className="col-span-1 sm:col-span-2 bg-gray-50 py-3 flex flex-row justify-center items-center gap-3">
+                  <div className="col-span-1 sm:col-span-2 bg-gray-50 py-3 flex flex-row justify-center items-center gap-3 w-full">
                     <button
                       type="button"
                       onClick={() => setOpen(false)}

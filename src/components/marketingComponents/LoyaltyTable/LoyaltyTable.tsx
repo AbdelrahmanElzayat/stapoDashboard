@@ -6,9 +6,8 @@ import { LoyaltyData } from "@/utils/types/HeaderInfoType";
 import Table from "@/components/HomeComponents/RequirementssTable/Table";
 import Image from "next/image";
 import actions from "../../../assets/icons/actions.svg";
-import AcceptModalExample from "@/components/modals/AcceptModal";
-import CancelModal from "@/components/modals/CancelModal";
-import EditOrder from "@/components/modals/EditOrder";
+import EditLoyalty from "@/components/modals/EditLoyalty";
+import DeleteLoyalty from "@/components/modals/DeleteLoyalty";
 
 interface QouponTableProps<T> {
   data: T[];
@@ -25,8 +24,12 @@ const LoyaltyTable = <T extends LoyaltyData>({
     setOpenRowId((prev) => (prev === rowId ? null : rowId));
   };
 
+  const [openModalEdit, setOpenModalEdit] = React.useState(false);
+  const editLoyalty = () => {
+    setOpenModalEdit(true);
+  };
   const [openModalCancel, setOpenModalCancel] = React.useState(false);
-  const cancelOrder = () => {
+  const deleteLoyalty = () => {
     setOpenModalCancel(true);
   };
   const columns: TableColumn<LoyaltyData>[] = [
@@ -71,6 +74,7 @@ const LoyaltyTable = <T extends LoyaltyData>({
                 <li
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                   onClick={() => {
+                    editLoyalty();
                     toggleDropdown(row.id);
                   }}
                 >
@@ -79,7 +83,7 @@ const LoyaltyTable = <T extends LoyaltyData>({
                 <li
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                   onClick={() => {
-                    cancelOrder();
+                    deleteLoyalty();
                     toggleDropdown(row.id);
                   }}
                 >
@@ -99,7 +103,8 @@ const LoyaltyTable = <T extends LoyaltyData>({
       <HeadLoyaltyTable label={label} />
       <div className="overflow-x-auto w-full">
         <Table data={data} columns={columns} />
-        <CancelModal open={openModalCancel} setOpen={setOpenModalCancel} />
+        <EditLoyalty open={openModalEdit} setOpen={setOpenModalEdit} />
+        <DeleteLoyalty open={openModalCancel} setOpen={setOpenModalCancel} />
       </div>
     </div>
   );

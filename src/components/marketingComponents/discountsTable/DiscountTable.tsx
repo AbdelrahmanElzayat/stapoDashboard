@@ -6,9 +6,8 @@ import { DiscountsType } from "@/utils/types/HeaderInfoType";
 import Table from "@/components/HomeComponents/RequirementssTable/Table";
 import Image from "next/image";
 import actions from "../../../assets/icons/actions.svg";
-import AcceptModalExample from "@/components/modals/AcceptModal";
-import CancelModal from "@/components/modals/CancelModal";
-import EditOrder from "@/components/modals/EditOrder";
+import EditDiscount from "@/components/modals/EditDiscount";
+import DeleteDiscount from "@/components/modals/DeleteDiscount";
 
 interface QouponTableProps<T> {
   data: T[];
@@ -25,13 +24,12 @@ const DiscountTable = <T extends DiscountsType>({
     setOpenRowId((prev) => (prev === rowId ? null : rowId));
   };
 
-  const [openModalAccept, setOpenModalAccept] = React.useState(false);
   const [openModalCancel, setOpenModalCancel] = React.useState(false);
   const [openModalEdit, setOpenModalEdit] = React.useState(false);
-  const acceptOrder = () => {
-    setOpenModalAccept(true);
+  const editDiscount = () => {
+    setOpenModalEdit(true);
   };
-  const cancelOrder = () => {
+  const deleteDiscount = () => {
     setOpenModalCancel(true);
   };
   const columns: TableColumn<DiscountsType>[] = [
@@ -71,6 +69,7 @@ const DiscountTable = <T extends DiscountsType>({
                 <li
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                   onClick={() => {
+                    editDiscount();
                     toggleDropdown(row.id);
                   }}
                 >
@@ -79,7 +78,7 @@ const DiscountTable = <T extends DiscountsType>({
                 <li
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                   onClick={() => {
-                    cancelOrder();
+                    deleteDiscount();
                     toggleDropdown(row.id);
                   }}
                 >
@@ -99,12 +98,8 @@ const DiscountTable = <T extends DiscountsType>({
       <HeadDiscountTable label={label} />
       <div className="overflow-x-auto w-full">
         <Table data={data} columns={columns} />
-        <AcceptModalExample
-          open={openModalAccept}
-          setOpen={setOpenModalAccept}
-        />
-        <CancelModal open={openModalCancel} setOpen={setOpenModalCancel} />
-        <EditOrder open={openModalEdit} setOpen={setOpenModalEdit} />
+        <DeleteDiscount open={openModalCancel} setOpen={setOpenModalCancel} />
+        <EditDiscount open={openModalEdit} setOpen={setOpenModalEdit} />
       </div>
     </div>
   );

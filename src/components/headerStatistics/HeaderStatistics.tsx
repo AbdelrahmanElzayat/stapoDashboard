@@ -19,9 +19,9 @@ const HeaderStatistics = ({
         <span className="text-[13px] text-textSecondary font-light">{des}</span>
       </div>
       <div
-        className={`grid grid-cols-3 md:grid-cols-${
-          length || 5
-        } md:gap-20 gap-5`}
+        className={`grid grid-cols-3 ${
+          length >= 5 ? "md:grid-cols-5" : "md:grid-cols-3"
+        }  md:gap-20 gap-5`}
       >
         {headerInfo?.map((item, index) => (
           <div

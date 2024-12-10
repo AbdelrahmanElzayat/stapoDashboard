@@ -2,7 +2,7 @@
 import React from "react";
 import HeadCouponTable from "./HeadCouponTable";
 import { TableColumn } from "react-data-table-component";
-import { CouponsData, Order } from "@/utils/types/HeaderInfoType";
+import { CouponsData } from "@/utils/types/HeaderInfoType";
 import Table from "@/components/HomeComponents/RequirementssTable/Table";
 import Image from "next/image";
 import actions from "../../../assets/icons/actions.svg";

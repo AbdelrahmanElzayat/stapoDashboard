@@ -7,7 +7,7 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 
-export default function DeleteCode({ open, setOpen }: any) {
+export default function DeleteDiscount({ open, setOpen }: any) {
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-50">
       <DialogBackdrop
@@ -28,11 +28,11 @@ export default function DeleteCode({ open, setOpen }: any) {
                     as="h3"
                     className="text-base custom-stroke font-normal"
                   >
-                    حذف الكود
+                    حذف الخصم
                   </DialogTitle>
                   <div className="mt-2 text-center flex justify-center">
                     <p className="text-sm text-black opacity-[.5]">
-                      هل تريد حذف الكود
+                      هل تريد حذف الخصم
                     </p>
                   </div>
                 </div>
