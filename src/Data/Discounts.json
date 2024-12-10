@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "discountPercentage": "20%",
+    "category": "منتجـات الكلاب",
+    "endDate": "13th Jan 2021",
+    "couponStatus": "سارى"
+  },
+  {
+    "id": 2,
+    "discountPercentage": "20%",
+    "category": "منتجـات الكلاب",
+    "endDate": "13th Jan 2021",
+    "couponStatus": "سارى"
+  },
+  {
+    "id": 3,
+    "discountPercentage": "20%",
+    "category": "منتجـات الكلاب",
+    "endDate": "13th Jan 2021",
+    "couponStatus": "سارى"
+  },
+  {
+    "id": 4,
+    "discountPercentage": "20%",
+    "category": "منتجـات الكلاب",
+    "endDate": "13th Jan 2021",
+    "couponStatus": "سارى"
+  },
+  {
+    "id": 5,
+    "discountPercentage": "20%",
+    "category": "منتجـات الكلاب",
+    "endDate": "13th Jan 2021",
+    "couponStatus": "سارى"
+  }
+]

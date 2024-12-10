@@ -55,7 +55,7 @@ const SideBar = () => {
             <Image src={logo} alt="Points Icon" width={30} height={30} />
           </div>
           <div className="flex flex-col gap-1">
-            <h4 className="font-extrabold text-textSecondary text-right custom-stroke">
+            <h4 className="font-extrabold text-sm text-textSecondary text-right">
               نقاط شريـك
             </h4>
             <span className="font-light text-textPrimary">5000 نقطة</span>

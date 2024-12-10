@@ -10,11 +10,11 @@ const PaymentOption = () => {
   return (
     <div className="PaymentOption w-full text-right">
       <h4 className="font-bold text-sm">طريقة الدفع</h4>
-      <ul className="flex justify-center items-center gap-4 mt-5">
+      <ul className="flex justify-center flex-col md:flex-row flex-wrap items-center gap-4 mt-5">
         <li
           className={`flex items-center justify-between gap-3 text-sm font-normal text-textPrimary px-4 py-3 rounded-lg transition-all ${
             payment === 1 ? "bg-[#FEF8DD] flex-1" : "#F3F6F5"
-          } bg-[#F3F6F5] cursor-pointer`}
+          }  cursor-pointer`}
           onClick={() => setPayment(1)}
         >
           <div className="Paytype flex items-center gap-3">
@@ -30,7 +30,7 @@ const PaymentOption = () => {
         <li
           className={`flex items-center justify-between gap-3 text-sm font-normal text-textPrimary px-4 py-3 rounded-lg transition-all ${
             payment === 2 ? "bg-[#FEF8DD] flex-1" : "#F3F6F5"
-          } bg-[#F3F6F5] cursor-pointer`}
+          } cursor-pointer`}
           onClick={() => setPayment(2)}
         >
           <div className="Paytype flex items-center gap-3 ">
@@ -46,7 +46,7 @@ const PaymentOption = () => {
         <li
           className={`flex items-center justify-between gap-3 text-sm font-normal text-textPrimary px-4 py-3 rounded-lg transition-all ${
             payment === 3 ? "bg-[#FEF8DD] flex-1" : "#F3F6F5"
-          } bg-[#F3F6F5] cursor-pointer`}
+          } cursor-pointer`}
           onClick={() => setPayment(3)}
         >
           <div className="Paytype flex items-center gap-3 ">

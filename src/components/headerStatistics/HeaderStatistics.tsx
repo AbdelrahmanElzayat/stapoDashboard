@@ -11,13 +11,18 @@ const HeaderStatistics = ({
   des,
   headerInfo,
 }: HeaderStatisticsProps) => {
+  const length = headerInfo?.length;
   return (
     <div className="HeaderStatistics flex flex-col md:flex-row gap-4 justify-between mt-6 w-full">
       <div className="titlePage">
-        <h1 className="text-textSecondary text-lg font-bold">{title}</h1>
+        <h1 className="text-textSecondary text-lg font-extrabold">{title}</h1>
         <span className="text-[13px] text-textSecondary font-light">{des}</span>
       </div>
-      <div className="grid grid-cols-3 md:grid-cols-5 md:gap-20 gap-5">
+      <div
+        className={`grid grid-cols-3 md:grid-cols-${
+          length || 5
+        } md:gap-20 gap-5`}
+      >
         {headerInfo?.map((item, index) => (
           <div
             key={index}

@@ -5,7 +5,7 @@ import style from "../../HomeComponents/RequirementssTable/table.module.css";
 interface propsHead {
   label: string;
 }
-const HeadAbandTable = ({ label }: propsHead) => {
+const HeadLoyaltyTable = ({ label }: propsHead) => {
   const months = Array.from({ length: 12 }, (_, i) =>
     new Date(0, i).toLocaleString("ar-EG", { month: "long" })
   );
@@ -23,32 +23,37 @@ const HeadAbandTable = ({ label }: propsHead) => {
             <Image src={searchIcon} alt="search" />
           </div>
         </div>
+
         <select
           className="pl-3 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
-          defaultValue="الشهر"
+          defaultValue="حالة الطلب"
         >
-          <option disabled>الشهر</option>
-          {months.map((month, index) => (
-            <option key={index} value={month}>
-              {month}
-            </option>
-          ))}
-        </select>
-        <select
-          className="pl-3 pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] text-xs font-normal outline-none"
-          defaultValue="المصدر"
-        >
-          <option disabled>المصدر</option>
-          <option value="المصدر1">المصدر 1</option>
-          <option value="المصدر2">المصدر 2</option>
-          <option value="المصدر3">المصدر 3</option>
+          <option disabled>حالة البرنامج</option>
+          <option value="ساري">ساري</option>
+          <option value="ملغي">ملغي</option>
         </select>
         <button className="text-xs font-normal py-2 px-2 lg:px-4 bg-[#F5D446] rounded-lg hover:bg-[#F5D446BC] transition-all">
-          ارسال تذكير للجميع
+          تصدير
+        </button>
+        <button className=" py-[2px] px-1 bg-[#646464] rounded-lg hover:bg-[#646464BC] transition-all">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="31"
+            height="28"
+            viewBox="0 0 31 28"
+            fill="none"
+          >
+            <path
+              d="M11.4336 14H20.3604M15.897 9.53662V18.4634"
+              stroke="white"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
       </div>
     </div>
   );
 };
 
-export default HeadAbandTable;
+export default HeadLoyaltyTable;

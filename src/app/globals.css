@@ -14,8 +14,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -32,7 +32,14 @@
   background: #a78cd3;
 }
 
-html {
+html,div {
   scrollbar-color: #a78cd3 #000;
   scrollbar-width: thin;
 }
+
+.custom-datepicker-popper {
+  z-index: 1050; /* أعلى من أي عناصر أخرى */
+}
+/* .rdt_Table{
+  width:90% !important;
+} */

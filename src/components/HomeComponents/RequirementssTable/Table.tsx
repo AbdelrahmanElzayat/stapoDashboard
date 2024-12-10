@@ -28,6 +28,32 @@ const Table = <T extends { id: number }>({
         customStyles={{
           rows: {
             style: {
+              minHeight: "35px", // تصغير ارتفاع الصفوف
+              fontSize: "12px",
+              color: "#000",
+              fontWeight: "400",
+              // padding: "4px 0px", // تقليل المسافات الداخلية
+            },
+          },
+          headCells: {
+            style: {
+              fontWeight: "300",
+              fontSize: "11px",
+              color: "#4C4C4C",
+              // padding: "4px 0px", // تقليل المسافات الداخلية للرأس
+            },
+          },
+          cells: {
+            style: {
+              // padding: "4px 0px", // تقليل المسافات الداخلية للخلايا
+            },
+          },
+        }}
+        responsive
+      />
+      {/* customStyles={{
+          rows: {
+            style: {
               minHeight: "40px", // تصغير الطول
               fontSize: "12px",
               color: "#000",
@@ -43,7 +69,7 @@ const Table = <T extends { id: number }>({
           },
         }}
         responsive
-      />
+      /> */}
     </>
   );
 };

@@ -5,6 +5,8 @@ import "../globals.css";
 import SideBar from "@/components/layout/SideBar";
 import Header from "@/components/layout/Header";
 import { MenuProvider } from "@/utils/MenuContext";
+import "react-datepicker/dist/react-datepicker.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 const almarai = Almarai({

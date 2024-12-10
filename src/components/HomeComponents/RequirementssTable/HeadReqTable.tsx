@@ -11,11 +11,7 @@ const HeadReqTable = ({ label }: propsHead) => {
   );
   return (
     <div className="flex items-center justify-between flex-wrap mb-4 overflow-auto">
-      <h2
-        className={`font-bold text-gray-800 ${style.paidTitle} text-sm lg:text-lg`}
-      >
-        {label}
-      </h2>
+      <h2 className={`font-bold text-gray-800 text-sm lg:text-lg`}>{label}</h2>
       <div className="flex items-center justify-center gap-2">
         <div className="search relative">
           <input

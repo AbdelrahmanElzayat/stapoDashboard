@@ -33,3 +33,27 @@ export interface Products {
   totalProducts: string;
   orderStatus: string;
 }
+export interface CouponsData {
+  id: number;
+  coupon: string;
+  category: string;
+  qty: string;
+  endDate: string;
+  discountPercentage: string;
+  couponStatus: string;
+}
+export interface LoyaltyData {
+  id: number;
+  programCode: string;
+  type: string;
+  qty: string;
+  startDate: string;
+  programStatus: string;
+}
+export interface DiscountsType {
+  id: number;
+  discountPercentage: string;
+  category: string;
+  endDate: string;
+  couponStatus: string;
+}
