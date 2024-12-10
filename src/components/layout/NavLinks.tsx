@@ -81,9 +81,9 @@ const NavLinks = () => {
           </li>
           <li className="mr-3">
             <Link
-              href={"/fwater"}
+              href={"/invoices"}
               className={`flex items-center gap-2 text-sm font-normal text-textPrimary ${
-                pathname === "/fwater" ? style.active : ""
+                pathname === "/invoices" ? style.active : ""
               }`}
             >
               <Image src={fwater} alt="fwater icon" />

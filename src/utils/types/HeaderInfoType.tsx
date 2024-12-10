@@ -57,3 +57,21 @@ export interface DiscountsType {
   endDate: string;
   couponStatus: string;
 }
+export interface ClientsType {
+  id: number;
+  clientCode: string;
+  clientName: string;
+  phoneNumber: string;
+  city: string;
+  totalPayments: string;
+  totalPoints: string;
+  clientStatus: string;
+}
+export interface InvoicesType {
+  id: number;
+  code: string;
+  date: string;
+  clientName: string;
+  price: string;
+  status: string;
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "clientCode": "43231",
+    "clientName": "عبدالرحمن الزيات",
+    "phoneNumber": "056 812 1947",
+    "city": "الدمام",
+    "totalPayments": "39",
+    "totalPoints": "أجمالي النقاط",
+    "clientStatus": "جاهز"
+  },
+  {
+    "id": 2,
+    "clientCode": "43231",
+    "clientName": "عبدالرحمن الزيات",
+    "phoneNumber": "056 812 1947",
+    "city": "الدمام",
+    "totalPayments": "39",
+    "totalPoints": "أجمالي النقاط",
+    "clientStatus": "جاهز"
+  },
+  {
+    "id": 3,
+    "clientCode": "43231",
+    "clientName": "عبدالرحمن الزيات",
+    "phoneNumber": "056 812 1947",
+    "city": "الدمام",
+    "totalPayments": "39",
+    "totalPoints": "أجمالي النقاط",
+    "clientStatus": "جاهز"
+  },
+  {
+    "id": 4,
+    "clientCode": "43231",
+    "clientName": "عبدالرحمن الزيات",
+    "phoneNumber": "056 812 1947",
+    "city": "الدمام",
+    "totalPayments": "39",
+    "totalPoints": "أجمالي النقاط",
+    "clientStatus": "جاهز"
+  },
+  {
+    "id": 5,
+    "clientCode": "43231",
+    "clientName": "عبدالرحمن الزيات",
+    "phoneNumber": "056 812 1947",
+    "city": "الدمام",
+    "totalPayments": "39",
+    "totalPoints": "أجمالي النقاط",
+    "clientStatus": "جاهز"
+  },
+  {
+    "id": 6,
+    "clientCode": "43231",
+    "clientName": "عبدالرحمن الزيات",
+    "phoneNumber": "056 812 1947",
+    "city": "الدمام",
+    "totalPayments": "39",
+    "totalPoints": "أجمالي النقاط",
+    "clientStatus": "جاهز"
+  }
+]
