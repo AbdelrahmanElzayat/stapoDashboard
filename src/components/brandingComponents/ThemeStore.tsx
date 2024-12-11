@@ -13,8 +13,8 @@ const ThemeStore = <T extends ThemesType>({ themes }: themesProps<T>) => {
       <h4 className="font-bold text-sm text-[#414141]">الثيـم</h4>
       <div className="cards mt-4 w-full flex justify-center items-center">
         <Swiper
-          spaceBetween={6} // المسافة بين الشرائح
-          slidesPerView={10} // عدد العناصر المرئية في نفس الوقت
+          spaceBetween={10} // المسافة بين الشرائح
+          slidesPerView={8} // عدد العناصر المرئية في نفس الوقت
           loop={false} // إيقاف التكرار
           freeMode={true}
           navigation={false} // إيقاف الأزرار للتنقل
@@ -34,8 +34,8 @@ const ThemeStore = <T extends ThemesType>({ themes }: themesProps<T>) => {
               spaceBetween: 10,
             },
             1024: {
-              slidesPerView: 10, // للشاشات الكبيرة مثل اللابتوب والديسكتوب
-              spaceBetween: 6,
+              slidesPerView: 8, // للشاشات الكبيرة مثل اللابتوب والديسكتوب
+              spaceBetween: 10,
             },
           }}
         >
