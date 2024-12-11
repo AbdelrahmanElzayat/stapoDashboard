@@ -1,4 +1,5 @@
 import SettingStore from "@/components/brandingComponents/SettingStore";
+import CopyRightText from "@/components/brandingComponents/CopyRightText";
 import ThemeStore from "@/components/brandingComponents/ThemeStore";
 import HeaderStatistics from "@/components/headerStatistics/HeaderStatistics";
 import ThemesData from "../../../Data/Themes.json";
@@ -13,6 +14,7 @@ const page = () => {
       />
       <SettingStore />
       <ThemeStore themes={themesData} />
+      <CopyRightText/>
     </div>
   );
 };
