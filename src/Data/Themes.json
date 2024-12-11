@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "mainColor": "#EA9BF3",
+    "secondColor": "#F6D2F8",
+    "selected":false
+  },
+  {
+    "id": 2,
+    "mainColor": "#F77A7A",
+    "secondColor": "#F6CCCC",
+    "selected": true
+  },
+  {
+    "id": 3,
+    "mainColor": "#8333EB",
+    "secondColor": "#D6C1EF",
+    "selected": false
+  },
+  {
+    "id": 4,
+    "mainColor": "#53C0DC",
+    "secondColor": "#BAE3F0",
+    "selected": false
+  },
+  {
+    "id": 5,
+    "mainColor": "#E49A16",
+    "secondColor": "#FCE1C6",
+    "selected": false
+  },
+  {
+    "id": 6,
+    "mainColor": "#EA9BF3",
+    "secondColor": "#F6D2F8",
+    "selected": false
+  },
+  {
+    "id": 7,
+    "mainColor": "#F77A7A",
+    "secondColor": "#F6CCCC",
+    "selected": false
+  },
+  {
+    "id": 8,
+    "mainColor": "#53C0DC",
+    "secondColor": "#BAE3F0",
+    "selected": false
+  }
+]

@@ -6,6 +6,7 @@ import SideBar from "@/components/layout/SideBar";
 import Header from "@/components/layout/Header";
 import { MenuProvider } from "@/utils/MenuContext";
 import "react-datepicker/dist/react-datepicker.css";
+import "swiper/css";
 
 
 const inter = Inter({ subsets: ["latin"] });

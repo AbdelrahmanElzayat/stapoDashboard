@@ -75,3 +75,9 @@ export interface InvoicesType {
   price: string;
   status: string;
 }
+export interface ThemesType {
+  id: number;
+  mainColor: string;
+  secondColor: string;
+  selected: boolean;
+}
