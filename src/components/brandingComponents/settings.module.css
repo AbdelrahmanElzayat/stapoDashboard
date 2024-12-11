@@ -1,0 +1,64 @@
+.inputColor {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 46px;
+  height: 46px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.inputColor::-webkit-color-swatch {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.07);
+}
+.inputColor::-moz-color-swatch {
+  border-radius: 10px;
+  border: none;
+}
+
+.formGroup {
+  position: relative;
+}
+@media (min-width: 994px) {
+  .formGroup::before {
+    content: "";
+    position: absolute;
+    right: -18%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 100px;
+    background: #e8e8e8;
+  }
+}
+.fileupload {
+  width: 100%;
+  padding: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  width: 200px;
+}
+.bgupload {
+  width: 300px !important;
+}
+@media (max-width: 767px) {
+  .fileupload,
+  .bgupload {
+    width: 100% !important;
+  }
+}
+.fileupload input {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+}

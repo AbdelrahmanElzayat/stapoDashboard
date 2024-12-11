@@ -4,14 +4,14 @@ import React from "react";
 interface HeaderStatisticsProps {
   title: string;
   des: string;
-  headerInfo: HeaderInfoType[];
+  headerInfo?: HeaderInfoType[];
 }
 const HeaderStatistics = ({
   title,
   des,
   headerInfo,
 }: HeaderStatisticsProps) => {
-  const length = headerInfo?.length;
+  const length: any = headerInfo?.length;
   return (
     <div className="HeaderStatistics flex flex-col md:flex-row gap-4 justify-between mt-6 w-full">
       <div className="titlePage">

@@ -32,7 +32,8 @@
   background: #a78cd3;
 }
 
-html,div {
+html,
+div {
   scrollbar-color: #a78cd3 #000;
   scrollbar-width: thin;
 }
@@ -43,3 +44,4 @@ html,div {
 /* .rdt_Table{
   width:90% !important;
 } */
+

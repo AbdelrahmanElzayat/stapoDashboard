@@ -100,9 +100,9 @@ const NavLinks = () => {
         <ul className="flex flex-col gap-5 mt-6">
           <li>
             <Link
-              href={"/aboutStore"}
+              href={"/branding"}
               className={`flex items-center gap-2 text-sm font-normal text-textPrimary ${
-                pathname === "/aboutStore" ? style.active : ""
+                pathname === "/branding" ? style.active : ""
               }`}
             >
               <Image src={aboutStore} alt="aboutStore icon" />
