@@ -111,9 +111,9 @@ const NavLinks = () => {
           </li>
           <li>
             <Link
-              href={"/user-settings"}
+              href={"/settings"}
               className={`flex items-center gap-2 text-sm font-normal text-textPrimary ${
-                pathname === "/user-settings" ? style.active : ""
+                pathname === "/settings" ? style.active : ""
               }`}
             >
               <Image src={user} alt="user icon" />

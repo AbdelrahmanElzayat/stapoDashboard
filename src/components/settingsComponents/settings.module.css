@@ -1,0 +1,14 @@
+@media (min-width: 994px) {
+  .socials {
+    position: relative;
+  }
+  .socials::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #e8e8e8;
+    top: 0;
+    right: -10%;
+  }
+}
