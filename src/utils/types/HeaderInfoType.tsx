@@ -81,3 +81,16 @@ export interface ThemesType {
   secondColor: string;
   selected: boolean;
 }
+
+export interface Permission {
+  name: string;
+}
+export interface Permissions {
+  id: number;
+  code: string;
+  userName: string;
+  phone: string;
+  city: string;
+  permissions: Permission[];
+  userStatus: string;
+}
