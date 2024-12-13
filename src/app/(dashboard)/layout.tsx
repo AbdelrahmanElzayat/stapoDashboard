@@ -8,7 +8,6 @@ import { MenuProvider } from "@/utils/MenuContext";
 import "react-datepicker/dist/react-datepicker.css";
 import "swiper/css";
 
-
 const inter = Inter({ subsets: ["latin"] });
 const almarai = Almarai({
   subsets: ["arabic"],
@@ -28,14 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <body
-        className={`${almarai.className} bg-backgroundPrimary overflow-x-hidden`}
+        className={`${almarai.className} bg-backgroundPrimary min-h-screen overflow-x-hidden`}
       >
         <MenuProvider>
-          <div className="flex gap-8 px-4 py-4">
+          <div className="flex gap-8 px-4 py-4 h-full">
             <SideBar />
-            <div className="main-content px-6 py-5 flex flex-col items-start flex-1 bg-white rounded-xl overflow-hidden">
+            <div className="main-content px-6 py-5 flex-grow overflow-hidden overflow-x-auto bg-white rounded-xl h-full ">
               <Header />
-              <main className="w-full">{children}</main>
+              <main className="w-full bg-white min-h-screen">{children}</main>
             </div>
           </div>
         </MenuProvider>

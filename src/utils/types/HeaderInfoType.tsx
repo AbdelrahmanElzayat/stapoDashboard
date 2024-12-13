@@ -94,3 +94,17 @@ export interface Permissions {
   permissions: Permission[];
   userStatus: string;
 }
+export interface Notifications {
+  id: number;
+  code: string;
+  notifyType: string;
+  users: string;
+  status: string;
+}
+export interface Ads {
+  id: number;
+  code: string;
+  adsType: string;
+  dateEnd: string;
+  status: string;
+}

@@ -122,9 +122,9 @@ const NavLinks = () => {
           </li>
           <li>
             <Link
-              href={"/mobile-app"}
+              href={"/app-management"}
               className={`flex items-center gap-2 text-sm font-normal text-textPrimary ${
-                pathname === "/mobile-app" ? style.active : ""
+                pathname === "/app-management" ? style.active : ""
               }`}
             >
               <Image src={mobile} alt="mobile icon" />

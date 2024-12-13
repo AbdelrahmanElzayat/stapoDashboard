@@ -29,10 +29,11 @@ const Table = <T extends { id: number }>({
           rows: {
             style: {
               minHeight: "35px", // تصغير ارتفاع الصفوف
-              fontSize: "12px",
+              fontSize: "11px",
               color: "#000",
               fontWeight: "400",
-              // padding: "4px 0px", // تقليل المسافات الداخلية
+              overFlow: "visible",
+              // padding: "4px 4px", // تقليل المسافات الداخلية
             },
           },
           headCells: {
@@ -45,7 +46,9 @@ const Table = <T extends { id: number }>({
           },
           cells: {
             style: {
-              // padding: "4px 0px", // تقليل المسافات الداخلية للخلايا
+              overFlow: "visible",
+              whiteSpace:"wrap",
+              padding: "4px 10px", // تقليل المسافات الداخلية للخلايا
             },
           },
         }}

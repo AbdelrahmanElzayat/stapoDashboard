@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "code": "43231",
+    "adsType": "نوع الاشعـار هنـا",
+    "dateEnd": "13th Jan 2021",
+    "status": "فعال"
+  },
+  {
+    "id": 2,
+    "code": "43231",
+    "adsType": "نوع الاشعـار هنـا",
+    "dateEnd": "13th Jan 2021",
+    "status": "فعال"
+  },
+  {
+    "id": 3,
+    "code": "43231",
+    "adsType": "نوع الاشعـار هنـا",
+    "dateEnd": "13th Jan 2021",
+    "status": "فعال"
+  },
+  {
+    "id": 4,
+    "code": "43231",
+    "adsType": "نوع الاشعـار هنـا",
+    "dateEnd": "13th Jan 2021",
+    "status": "فعال"
+  },
+  {
+    "id": 5,
+    "code": "43231",
+    "adsType": "نوع الاشعـار هنـا",
+    "dateEnd": "13th Jan 2021",
+    "status": "فعال"
+  }
+]

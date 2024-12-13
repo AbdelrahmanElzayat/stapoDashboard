@@ -6,7 +6,7 @@ const ChooseColor = () => {
   const [secondColor, setSecondColor] = useState("#DBDBFF");
   return (
     <div className="chooseColors w-full md:w-auto mt-4 flex flex-wrap items-center gap-5">
-      <div className="inputsColor flex flex-col gap-4">
+      <div className="inputsColor w-full xs:w-auto flex flex-col gap-4">
         <div className="mainColor flex flex-col gap-1">
           <label className="text-xs font-normal">اللون الاساسـى</label>
           <div className="groupInputColor flex items-center gap-3">
@@ -45,7 +45,7 @@ const ChooseColor = () => {
         </div>
       </div>
       <div
-        className={`boxColor border-8 rounded-2xl h-[130px] w-[160px] px-[25px] py-[15px] self-end flex flex-col items-center justify-center gap-3`}
+        className={`boxColor w-full border-8 rounded-2xl h-[130px] sm:w-[160px] px-[25px] py-[15px] self-end flex flex-col items-center justify-center gap-3`}
         style={{ borderColor: secondColor+'A1' }}
       >
         <div
