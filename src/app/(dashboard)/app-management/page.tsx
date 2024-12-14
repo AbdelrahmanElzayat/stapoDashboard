@@ -5,6 +5,12 @@ import NotificationsData from "../../../Data/NotificationsData.json";
 import AdsData from "../../../Data/AdsData.json";
 import { Ads, Notifications } from "@/utils/types/HeaderInfoType";
 import AdsTable from "@/components/appComponents/AdsTable/AdsTable";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Stapo - App-management",
+};
+
 const page = () => {
   const data: Notifications[] = NotificationsData;
   const Adsdata: Ads[] = AdsData;

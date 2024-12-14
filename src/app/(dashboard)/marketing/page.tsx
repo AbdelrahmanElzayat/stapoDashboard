@@ -12,7 +12,11 @@ import {
 import CouponTable from "@/components/marketingComponents/couponTable/CouponTable";
 import LoyaltyTable from "@/components/marketingComponents/LoyaltyTable/LoyaltyTable";
 import DiscountTable from "@/components/marketingComponents/discountsTable/DiscountTable";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Stapo - Marketing",
+};
 const page = () => {
   const headerInfo: HeaderInfoType[] = [
     {

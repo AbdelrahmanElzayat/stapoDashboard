@@ -3,7 +3,11 @@ import { HeaderInfoType, Products } from "@/utils/types/HeaderInfoType";
 import React from "react";
 import productsData from "../../../Data/productsData.json";
 import ProductsTable from "@/components/productsComponents/productsTable/ProductsTable";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Stapo - Products",
+};
 const page = () => {
   const headerInfo: HeaderInfoType[] = [
     {

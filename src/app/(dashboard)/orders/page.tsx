@@ -10,7 +10,11 @@ import {
 } from "@/utils/types/HeaderInfoType";
 import OrderTable from "@/components/orderComponents/tablesComponents/OrderTable";
 import AbandonedTable from "@/components/orderComponents/tablesComponents/AbandonedTable";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Stapo - Orders",
+};
 const page = () => {
   const data: Order[] = homeData;
   const dataAbandoned: AbandonedData[] = dataAbandonedd;

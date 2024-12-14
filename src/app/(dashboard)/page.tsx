@@ -3,7 +3,11 @@ import BarChart from "@/components/HomeComponents/pipesCharts/BarChart";
 import HeaderStatistics from "@/components/headerStatistics/HeaderStatistics";
 import { HeaderInfoType, Order } from "@/utils/types/HeaderInfoType";
 import homeData from "../../Data/HomeDataTable.json";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Stapo - Home",
+};
 export default function Home() {
   const headerInfo: HeaderInfoType[] = [
     {

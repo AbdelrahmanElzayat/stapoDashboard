@@ -3,6 +3,12 @@ import AutoMessages from "@/components/whatsappComponent/customMessages/AutoMess
 import WhatsappChats from "@/components/whatsappComponent/whatsappChat/WhatsappChats";
 import whatsData from "../../../Data/Whatsapp.json";
 import { Whatsapp } from "@/utils/types/HeaderInfoType";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Stapo - Whatsapp-management",
+};
+
 const page = () => {
   const whatsappData: Whatsapp[] = whatsData;
   return (

@@ -3,6 +3,11 @@ import React from "react";
 import ClientsData from "../../../Data/ClientsData.json";
 import { ClientsType, HeaderInfoType } from "@/utils/types/HeaderInfoType";
 import ClientsTable from "@/components/clientsComponents/ClientsTable";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Stapo - Clients",
+};
 
 const page = () => {
   const headerInfo: HeaderInfoType[] = [

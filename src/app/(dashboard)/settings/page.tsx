@@ -4,6 +4,11 @@ import StoreInfo from "@/components/settingsComponents/storeInfo/StoreInfo";
 import UserPermissionsTable from "@/components/settingsComponents/usersPermissions/UserPermissionsTable";
 import { Permissions } from "@/utils/types/HeaderInfoType";
 import permissionData from "../../../Data/UserPermissions.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Stapo - Settings",
+};
 
 const page = () => {
   const data: Permissions[] = permissionData;

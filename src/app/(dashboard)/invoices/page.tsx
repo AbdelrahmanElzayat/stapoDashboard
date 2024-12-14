@@ -3,7 +3,12 @@ import React from "react";
 import InvoicesData from "../../../Data/InvoicesData.json";
 import { HeaderInfoType, InvoicesType } from "@/utils/types/HeaderInfoType";
 import InvoicesTable from "@/components/invoicesComponents/InvoicesTable";
+import { Metadata } from "next";
 
+
+export const metadata: Metadata = {
+  title: "Stapo - Invoices",
+};
 const page = () => {
   const headerInfo: HeaderInfoType[] = [
     {
