@@ -108,3 +108,9 @@ export interface Ads {
   dateEnd: string;
   status: string;
 }
+export interface Whatsapp {
+  id: number;
+  userName: string;
+  userMessage: string;
+  timeAgo: string;
+}

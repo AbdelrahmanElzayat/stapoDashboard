@@ -133,9 +133,9 @@ const NavLinks = () => {
           </li>
           <li>
             <Link
-              href={"/whatsapp-settings"}
+              href={"/whatsapp-management"}
               className={`flex items-center gap-2 text-sm font-normal text-textPrimary ${
-                pathname === "/whatsapp-settings" ? style.active : ""
+                pathname === "/whatsapp-management" ? style.active : ""
               }`}
             >
               <Image src={whatsapp} alt="whatsapp icon" />
