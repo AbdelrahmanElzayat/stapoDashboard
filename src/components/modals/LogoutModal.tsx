@@ -7,7 +7,7 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 
-export default function DeleteLoyalty({ open, setOpen }: any) {
+export default function LogoutModal({ open, setOpen }: any) {
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-50">
       <DialogBackdrop
@@ -28,11 +28,11 @@ export default function DeleteLoyalty({ open, setOpen }: any) {
                     as="h3"
                     className="text-base custom-stroke font-normal"
                   >
-                    حذف البرنامج
+                    تسجيل الخروج
                   </DialogTitle>
                   <div className="mt-2 text-center flex justify-center">
                     <p className="text-sm text-black opacity-[.5]">
-                      هل تريد حذف البرنامج
+                      هل تريد تسجيل الخروج من حسابك
                     </p>
                   </div>
                 </div>

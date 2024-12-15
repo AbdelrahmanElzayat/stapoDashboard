@@ -135,7 +135,7 @@ export default function ProfileEditModal({ open, setOpen }: any) {
                           <canvas ref={canvasRef} className="hidden" />
                           <button
                             type="button"
-                            className="inline-flex flex-1 justify-center rounded-lg bg-[#F5D446] py-2 text-sm font-semibold text-black shadow-sm hover:bg-[#F5D446bc] sm:ml-3 sm:w-auto"
+                            className="inline-flex flex-1 justify-center rounded-lg bg-[#F5D446] py-2 px-3 text-sm font-semibold text-black shadow-sm hover:bg-[#F5D446bc] sm:ml-3 sm:w-auto"
                             onClick={captureImage}
                           >
                             التقاط الصورة

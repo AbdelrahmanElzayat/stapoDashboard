@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Logo from "../logo/Logo";
 import NavLinks from "./NavLinks";
@@ -8,8 +8,10 @@ import logoutIcon from "../../assets/icons/logouticon.svg";
 import closeIcon from "../../assets/icons/close.svg";
 import logo from "../../assets/images/cirtify.png";
 import { useMenu } from "@/utils/MenuContext";
+import LogoutModal from "../modals/LogoutModal";
 
 const SideBar = () => {
+  const [openLogout, setOpenLogOut] = useState(false);
   const { isMenuOpen, toggleMenu } = useMenu();
   useEffect(() => {
     if (isMenuOpen) {
@@ -21,6 +23,9 @@ const SideBar = () => {
       document.body.classList.remove("overflow-hidden");
     };
   }, [isMenuOpen]);
+  const toggleLogout = () => {
+    setOpenLogOut(true);
+  };
   return (
     <>
       {/* Overlay */}
@@ -72,11 +77,12 @@ const SideBar = () => {
         <div className="mt-auto lg:mt-24 px-4">
           <button
             className="flex items-center gap-3 text-textSecondary text-sm font-normal"
-            onClick={() => alert("Logging out...")}
+            onClick={() => toggleLogout()}
           >
             <Image src={logoutIcon} alt="Logout Icon" width={20} height={20} />
             تسجيل الخروج
           </button>
+          <LogoutModal open={openLogout} setOpen={setOpenLogOut} />
         </div>
       </aside>
     </>
