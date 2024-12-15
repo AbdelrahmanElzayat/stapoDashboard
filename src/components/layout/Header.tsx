@@ -7,8 +7,13 @@ import messages from "../../assets/icons/messages.svg";
 import user from "../../assets/images/user.png";
 import Link from "next/link";
 import { useMenu } from "@/utils/MenuContext";
+import ProfileModal from "../modals/ProfileModal";
 const Header = () => {
   const { isMenuOpen, toggleMenu } = useMenu();
+  const [openModalProfile, setOpenModalProfile] = React.useState(false);
+  const openProfileModal = () => {
+    setOpenModalProfile(true);
+  };
   return (
     <>
       <header className="header flex justify-between items-center w-full xl:gap-24 gap-4">
@@ -46,9 +51,11 @@ const Header = () => {
             <Image src={messages} alt="messages-icon" />
           </Link>
           <div className="userInfo flex justify-center items-center gap-4">
-            <Link
-              href={"/"}
-              className="userImage rounded-full w-8 h-8 md:w-10 md:h-10 overflow-hidden"
+            <div
+              className="userImage cursor-pointer rounded-full w-8 h-8 md:w-10 md:h-10 overflow-hidden relative z-50 border-2 border-white"
+              onClick={() => {
+                openProfileModal();
+              }}
             >
               <Image
                 src={user}
@@ -57,7 +64,11 @@ const Header = () => {
                 height={100}
                 objectFit="cover"
               />
-            </Link>
+            </div>
+              <ProfileModal
+                open={openModalProfile}
+                setOpen={setOpenModalProfile}
+              />
             <div className="userData md:flex flex-col hidden">
               <h6
                 className="text-textSecondary text-sm font-semibold m-0"

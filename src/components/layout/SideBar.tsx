@@ -33,7 +33,7 @@ const SideBar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed lg:relative top-0 left-0 z-50 bg-white lg:bg-transparent shadow-lg lg:shadow-none transform flex flex-col gap-6 pt-5 pb-7 lg:min-h-[calc(100vh-32px)] h-[100vh] lg:max-h-full overflow-y-auto lg:overflow-visible ${
+        className={`fixed lg:relative top-0 left-0 z-40 bg-white lg:bg-transparent shadow-lg lg:shadow-none transform flex flex-col gap-6 pt-5 pb-7 lg:min-h-[calc(100vh-32px)] h-[100vh] lg:max-h-full overflow-y-auto lg:overflow-visible ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0 transition-transform duration-300 ease-in-out `}
       >

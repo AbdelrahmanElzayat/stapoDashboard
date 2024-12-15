@@ -1,0 +1,57 @@
+.profileModal {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 12.5px 0px rgba(242, 152, 91, 0.79);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+.profileAmount {
+  border-radius: 20px;
+  background: #f3f6f5;
+  box-shadow: 0px 0px 12.5px 0px rgba(242, 152, 91, 0.79);
+  backdrop-filter: blur(5px);
+}
+.points {
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fffdf8, #fff1dc);
+}
+
+.profileTypes .type {
+  position: relative;
+}
+.profileTypes .type:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 120%;
+  height: 1px;
+  width: 80px;
+  background: #d2d2d2;
+}
+@media (max-width: 430px) {
+  .profileTypes .type:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 100%;
+    height: 1px;
+    width: 50px;
+    background: #d2d2d2;
+  }
+}
+@media (max-width: 380px) {
+  .profileTypes .type:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 110%;
+    height: 1px;
+    width: 30px;
+    background: #d2d2d2;
+  }
+}
+@media (max-width: 300px) {
+  .profileTypes .type:not(:last-child)::after {
+    display: none;
+  }
+}
