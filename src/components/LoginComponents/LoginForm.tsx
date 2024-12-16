@@ -103,7 +103,7 @@ const LoginForm = () => {
         )}
       </Formik>
       <div className="text-xs text-textSecondary font-normal text-center">
-        ليس لديك حساب <Link href={"##"} className="font-bold">حساب جديد</Link>
+        ليس لديك حساب؟ <Link href={"##"} className="font-bold">حساب جديد</Link>
       </div>
     </div>
   );
