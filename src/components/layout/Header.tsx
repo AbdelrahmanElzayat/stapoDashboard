@@ -8,11 +8,16 @@ import user from "../../assets/images/user.png";
 import Link from "next/link";
 import { useMenu } from "@/utils/MenuContext";
 import ProfileModal from "../modals/ProfileModal";
+import ProfileEditModal from "../modals/ProfileEditModal";
 const Header = () => {
   const { isMenuOpen, toggleMenu } = useMenu();
   const [openModalProfile, setOpenModalProfile] = React.useState(false);
   const openProfileModal = () => {
     setOpenModalProfile(true);
+  };
+  const [openModalProfileEdit, setOpenModalProfileEdit] = React.useState(false);
+  const openProfileModalEdit = () => {
+    setOpenModalProfileEdit(true);
   };
   return (
     <>
@@ -65,10 +70,10 @@ const Header = () => {
                 objectFit="cover"
               />
             </div>
-              <ProfileModal
-                open={openModalProfile}
-                setOpen={setOpenModalProfile}
-              />
+            <ProfileModal
+              open={openModalProfile}
+              setOpen={setOpenModalProfile}
+            />
             <div className="userData md:flex flex-col hidden">
               <h6
                 className="text-textSecondary text-sm font-semibold m-0"
@@ -76,10 +81,17 @@ const Header = () => {
               >
                 khalid saied
               </h6>
-              <Link href={"/"} className="text-xs text-[#A5A5A5] font-normal">
+              <span
+                className="text-xs text-[#A5A5A5] font-normal cursor-pointer"
+                onClick={openProfileModalEdit}
+              >
                 الإعدادات
-              </Link>
+              </span>
             </div>
+            <ProfileEditModal
+              open={openModalProfileEdit}
+              setOpen={setOpenModalProfileEdit}
+            />
           </div>
         </div>
       </header>
