@@ -1,0 +1,15 @@
+.loginFormTitle::after, .loginFormTitle::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 1px;
+    background: #D6D6D6;
+}
+.loginFormTitle::after{
+    right: 10px;
+}
+.loginFormTitle::before{
+    left: 10px;
+}
