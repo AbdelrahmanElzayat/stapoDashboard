@@ -209,6 +209,11 @@ export default function ProfileEditModal({ open, setOpen }: any) {
                   <div className="bg-gray-50 py-3 flex flex-row justify-center items-center gap-3">
                     <button
                       type="submit"
+                      onClick={() => {
+                        // setOpen(false);
+                        // setPreview(null);
+                        // stopCamera();
+                      }}
                       className="inline-flex flex-1 justify-center rounded-lg bg-[#F5D446] py-2 text-sm font-semibold text-black shadow-sm hover:bg-[#F5D446bc] sm:ml-3 sm:w-auto"
                     >
                       تأكيـد
@@ -218,6 +223,7 @@ export default function ProfileEditModal({ open, setOpen }: any) {
                       onClick={() => {
                         setOpen(false);
                         setPreview(null);
+                        stopCamera();
                       }}
                       className="inline-flex flex-1 border-none outline-none justify-center rounded-lg bg-[#F3F6F5] py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 sm:mt-0 sm:w-auto"
                     >

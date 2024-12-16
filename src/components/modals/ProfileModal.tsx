@@ -132,15 +132,15 @@ export default function ProfileModal({ open, setOpen }: any) {
                 <div className="group-hover:animate-bounce">
                   <Image src={Arrow} alt="profile" className="rotate-180 " />
                 </div>
+                <ProfileEditModal
+                  open={openProfileEditModal}
+                  setOpen={setOpenProfileEditModal}
+                />
               </div>
             </DialogPanel>
           </div>
         </div>
       </Dialog>
-      <ProfileEditModal
-        open={openProfileEditModal}
-        setOpen={setOpenProfileEditModal}
-      />
     </>
   );
 }
