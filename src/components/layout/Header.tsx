@@ -86,12 +86,12 @@ const Header = () => {
                 onClick={openProfileModalEdit}
               >
                 الإعدادات
+                <ProfileEditModal
+                  open={openModalProfileEdit}
+                  setOpen={setOpenModalProfileEdit}
+                />
               </span>
             </div>
-            <ProfileEditModal
-              open={openModalProfileEdit}
-              setOpen={setOpenModalProfileEdit}
-            />
           </div>
         </div>
       </header>
