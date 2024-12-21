@@ -14,7 +14,7 @@ const HeadChart = () => {
   return (
     <div className="flex items-center justify-between mb-4">
       <h2
-        className={`font-bold text-gray-800 text-sm  lg:text-lg ${style.paidTitle}`}
+        className={`font-bold text-gray-800 text-sm  lg:text-lg`}
       >
         مبيعات المتجر
       </h2>
@@ -25,6 +25,7 @@ const HeadChart = () => {
             value={selectedYear}
             onChange={handleYearChange}
             className={`pl-0 lg:pl-5 text-sm pr-2 py-2 rounded-lg border-[1px] border-[#E6E6E6] outline-none ${style.yearTitle}`}
+    
           >
             {years.map((year) => (
               <option key={year} value={year}>

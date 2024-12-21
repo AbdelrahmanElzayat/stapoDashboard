@@ -64,7 +64,7 @@ const SideBar = () => {
               نقاط شريـك
             </h4>
             <span className="font-light text-textPrimary">5000 نقطة</span>
-            <div className="bg-[#A78CD3] rounded-full py-1 px-5 text-white text-sm font-light">
+            <div className="bg-[#A78CD3] rounded-full py-1 px-5 text-white text-sm font-light text-nowrap">
               150 ر.س
             </div>
           </div>
