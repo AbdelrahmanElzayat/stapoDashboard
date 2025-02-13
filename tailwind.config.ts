@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+       boxShadow: {
+        custom: "0px 20px 25px 0px rgba(210, 210, 210, 0.16)",
+        btn: "0px 15px 12.5px 0px rgba(64, 64, 64, 0.11)",
+        btnsb: "15px 15px 25px 0px rgba(112, 66, 220, 0.17)"
+      },
        fontFamily: {
         almarai: ["almarai", "sans-serif"], // اجعل Inter الخط الافتراضي
         sans: ["Inter", "sans-serif"], // اجعل Inter الخط الافتراضي
@@ -15,14 +20,9 @@ const config: Config = {
       screens: {
         xs: '480px',
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
         backgroundPrimary: "#F5F8FA",
-        textPrimary: '#000',
+        textPrimary: "#000",
         textSecondary: "#323232",
       },
     },
